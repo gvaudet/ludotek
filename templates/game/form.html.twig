@@ -4,6 +4,37 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Formulaire de création de jeu
-	</h1>
+	<div class="form-container">
+		<form action="#" method="">
+			<div class="formDiv">
+				<label for="name">Entrer le nom du jeu </label>
+				<input type="text" name="name" placeholder="Nom du jeu" id="name" class="createInput"required>
+			</div>
+			<div class="formDiv">
+				<label for="description">Entrer la desciption du jeu </label>
+				<input type="text" name="description" placeholder="description du jeu" id="description" class="createInput"required>
+			</div>
+			<div class="formDiv">
+				<label for="age">Entrer l'âge minimum </label>
+				<input type="text" name="age" placeholder="age du plus jeune joueur" id="age" class="createInput"required>
+			</div>
+			<div class="formDiv">
+				<label for="picture">Chemin de la photo du jeu</label>
+				<input type="text" name="picture" placeholder="On a parcouru le chemin" id="picture"class="createInput">
+			</div>
+			<div class="formDiv">
+				<label for="minPlayer">Indiquer le nombre de joueurs minimum</label>
+				<input type="text" name="minPlayer" placeholder="Nombre de joueur min" id="minPlayer"class="createInput">
+			</div>
+			<div class="formDiv">
+				<label for="maxPlayer">Indiquer le nombre de joueurs maximum</label>
+				<input type="text" name="maxPlayer" placeholder="Nombre de joueur max" id="maxPlayer"class="createInput">
+			</div>
+			<div class="formDiv">
+				<label for="duration">Indiquer le temps d'une partie moyenne</label>
+				<input type="text" name="duration" placeholder="Temps de perdu" id="duration"class="createInput">
+			</div>
+			<button type="submit" class="button">valider</button>
+		</form>
+	</div>
 {% endblock %}

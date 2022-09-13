@@ -6,9 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+#[Route('', name: 'main_')]
+
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'main_index')]
+    #[Route('/', name: 'index')]
     public function index(): Response
     {
         return $this->render('main/index.html.twig', [
@@ -18,7 +20,7 @@ class MainController extends AbstractController
 
 
 
-    #[Route('/a_propos', name: 'main_about')]
+    #[Route('/a-propos', name: 'about')]
     public function about(): Response
     {
         return $this->render('main/about.html.twig');

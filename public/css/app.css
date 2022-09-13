@@ -1,0 +1,178 @@
+:root{
+    --primary: #122c46; 
+    --secondary: rgb(79, 165, 252);
+    --light: rgb(129, 221, 252); 
+    --dark: #450205;
+    --error: #85040E;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.button{
+    border-radius: 5px;
+    background-color: var(--primary);
+    padding: 10px;
+}
+
+.button:hover{
+    transition: 500ms;
+    border-radius: 5px;
+    background-color: var(--error);
+    padding: 10px;
+}
+/* -------------- components / header ---------------*/
+
+header{
+    height: 50px;
+
+    padding: 20px; 
+
+    background-color: var(--primary);
+
+
+}
+
+#logo{
+    font-size: 2em;
+}
+
+#navBar{
+    display: flex;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ /* a:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 500ms;
+} */
+
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin-right: 10px;
+    transition: all 500ms;
+}
+li a:hover {
+    background-color: var(--error);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* -------------- <main> ---------------*/
+
+main{
+    flex-grow: 1;
+}
+
+.landing{
+    position: relative;
+    height: 90vh; 
+    background-image: url("../images/chess.jpg");
+    background-size: cover;
+}
+
+.landing-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+/* -------------- templates / main / index ----------------*/
+
+/* -------------- templates / game / form ----------------*/
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    width: 500Px;
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 9px -1px #450205;
+} 
+.formDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.createInput{
+    padding: 5px;
+    border-radius: 10px;
+}
+.form-container .button{
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+}
+
+.form-container .button:hover{
+    transition: 500ms;
+    border-radius: 5px;
+    background-color: var(--error);
+    padding: 10px;
+}
+
+/* -------------- components / footer ---------------*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    color: white;
+    background-color: var(--primary);
+}
+.legal{
+text-align: center;
+}
+
+.legal ul{
+    display: flex;
+    margin-top: 20px;
+}
+.legal ul li{
+    margin-right: 10px;
+}
+.legal p{
+    margin-top: 20px;
+}
+

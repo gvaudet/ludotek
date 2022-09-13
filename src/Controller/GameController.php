@@ -25,7 +25,7 @@ class GameController extends AbstractController
     }
 
 
-    #[Route('/nouveau', name: 'create')]
+    #[Route('/nouveau', name: 'form')]
     public function form(): Response
     {
         return $this->render('game/form.html.twig');
