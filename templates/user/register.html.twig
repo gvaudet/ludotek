@@ -4,5 +4,22 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Inscription</h1>
+	<div class="form-container">
+		<form action="#" method="">
+			<div class="formDiv">
+				<label for="email">Votre adresse mail</label>
+				<input type="email" name="email" placeholder="Emiel" id="email" class="createInput"required>
+			</div>
+			<div class="formDiv">
+				<label for="pseudo">Votre pseudo</label>
+				<input type="text" name="pseudo" placeholder="Xx_darkSasuke_xX" id="Pseudo" class="createInput"required>
+			</div>
+			<div class="formDiv">
+				<label for="password">Ton mot de passe couillon</label>
+				<input type="password" name="password" placeholder="le mot de passe?" id="password" class="createInput"required>
+			</div>
+			
+			<button type="submit" class="button">valider</button>
+		</form>
+	</div>
 {% endblock %}
