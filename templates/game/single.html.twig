@@ -3,7 +3,22 @@
 {% block title %}Hello MainController!
 {% endblock %}
 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/single.css')}}">
+{% endblock %}
+
 {% block body %}
-	<h1>Fiche de jeu
-	</h1>
+
+	<div class="singleContainer">
+		<h1> {{ single.name }}</h1>
+		<img src="{{ asset('/images/game/' ~ single.picture) }}" alt="">
+		<span>{{ single.category.name }}</span>
+		<p>{{ single.description }}</p>
+		<p>il faut {{ single.minimumAge }} ans minimum pour tenter ta chance</p>
+		{# {% if maximumPlayer == null %}
+		<p>Le nombre de joueur min est {{ single.minimumPlayer}} et le nombre de joueur max est</p>
+		{% endif %} #}
+		{{single.duration|date('H:i')}}
+		{{single.releaseAt|date('d/m/Y')}}
+	</div>
 {% endblock %}

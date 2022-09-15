@@ -12,26 +12,28 @@
 		<link rel="stylesheet" href="{{ asset('css/app.css')}}"> 
 		{% block stylesheets %}
 		{% endblock %}
+
 		<script></script>
+		
 		{% block javascripts %}
 		{% endblock %}
 	</head>
 
 	<body>
 		{% include "components/header.html.twig"%}
+
 			<main>
 				{% block body %}{% endblock %}
 			</main>
-		{% include "components/footer.html.twig"%}
-	</body>
 
-		{#
-			Céer un layout pour notre application 
-			- Header avec un logo et le nom de l'application seront clicable pour accéder à la page d'accueil 
-			- Dans le header un menu avec des lines vers les pages : liste des jeux, connexion, incription
-			- Footer avec de faux liens : Mentions légales, politique de conf, CGU
-			- Dans le footer la mention "tous droits réservés - année" 
-			- (Optionnel) Créer un élément pour accueillir les visiteurs sur la page d'accueil
-		#}
-		
-	</html>
+		{% include "components/footer.html.twig"%}
+
+		{% for type, messages in app.flashes%}
+			{% for message in messages %}
+			<div class="notification">
+			{{ message }}
+			</div>
+		{% endfor %}
+		{% endfor %}
+	</body>
+</html>

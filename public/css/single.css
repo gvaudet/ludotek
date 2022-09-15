@@ -1,0 +1,11 @@
+.singleContainer{
+    margin: auto;
+    max-width: 1200px;
+
+}
+
+.singleContainer img{
+    height: 200px;
+    width: 200px;
+}
+

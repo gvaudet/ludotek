@@ -1,3 +1,4 @@
+
 :root{
     --primary: #122c46; 
     --secondary: rgb(79, 165, 252);
@@ -12,6 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 
 .container{
     max-width: 1600px;
@@ -110,6 +112,7 @@ main{
 }
 /* -------------- templates / main / index ----------------*/
 
+
 /* -------------- templates / game / form ----------------*/
 
 .form-container{
@@ -126,13 +129,18 @@ main{
     width: 500Px;
     border: 3px solid var(--primary);
     border-radius: 10px;
-    padding: 10px;
+    padding: 30px;
     box-shadow: 5px 5px 9px -1px #450205;
 } 
+
+
+
 .formDiv{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
+
 .createInput{
     padding: 5px;
     border-radius: 10px;

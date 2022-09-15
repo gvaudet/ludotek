@@ -2,18 +2,18 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoryRepository;
+use App\Repository\DesignerRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: CategoryRepository::class)]
-class Category
+#[ORM\Entity(repositoryClass: DesignerRepository::class)]
+class Designer
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 30)]
+    #[ORM\Column(length: 50)]
     private ?string $name = null;
 
     public function getId(): ?int
@@ -31,10 +31,5 @@ class Category
         $this->name = $name;
 
         return $this;
-    }
-
-    public function __toString():string
-    {
-        return $this->getName(); 
     }
 }

@@ -1,10 +1,45 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GameController!
+{% block title %}Catalogue - {{parent()}}
 {% endblock %}
 
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/game-list.css')}}"> 
+		{% endblock %}
+
 {% block body %}
-	<h1>
-		Liste des jeux
-	</h1>
+	<h1>Catalogue</h1>
+
+
+<div class="container" id="catalogGrid">
+
+	{% for game in games %}
+		<div class="card">
+			<div class="gameName">
+				<h2>{{game.name}}</h2>
+			</div>
+
+			<img src="{{ asset('images/game/' ~ game.picture) }}" alt="">
+
+			<div class="label">{{game.category.name}}</div>
+
+			<div class="description">
+				<p>Description {{game.description|slice(0, 60)~'...'}}</p>
+			</div>
+			<a href="#">Voir la fiche</a>
+
+			<a href="{{ path('game_single', {id : game.id}) }}">Voir fiche</a>
+		</div>
+	{% endfor %}
+
+</div>
+	{#
+		Afficher l'ensemble des jeux (plus ou moins visuellement agréable)
+		Afficher les données suivantes: 
+		-Nom
+		-Catégorie
+		-Les 60 premiers caractère de la description 
+		-l'image 
+
+	#}
 {% endblock %}

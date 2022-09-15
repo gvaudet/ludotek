@@ -1,10 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!
+{% block title %}Ajouter un jeu
 {% endblock %}
 
 {% block body %}
-	<div class="form-container">
+
+<h1>Ajouter un jeu </h1>
+
+
+{#Première méthode de form on affiche tout d'un coup mais assez deg#}
+{# {{ form(form) }} #}
+
+
+
+
+{# Deuxième méthode de form #}
+<div class="form-container">
+{{ form_start(form) }}
+
+		{{ form_row(form.name) }}
+
+		{{ form_row(form.picture) }}
+
+		{{ form_row(form.description)}}
+
+		{{ form_row(form.minimumAge)}}
+
+		{{ form_row(form.minimumPlayer)}}
+
+		{{ form_row(form.maximumPlayer)}}
+
+		{{ form_row(form.duration)}}
+
+		{{ form_row(form.releaseAt)}}
+
+		{{ form_row(form.category)}}
+
+		{{ form_row(form.editors)}}
+
+<button class="button">Ajouter</button>
+
+{{ form_end(form)}}
+
+</div>
+
+	{# <div class="form-container">
 		<form action="#" method="">
 			<div class="formDiv">
 				<label for="name">Entrer le nom du jeu </label>
@@ -36,5 +76,7 @@
 			</div>
 			<button type="submit" class="button">valider</button>
 		</form>
-	</div>
+	</div> #}
+
+
 {% endblock %}

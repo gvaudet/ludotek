@@ -1,0 +1,48 @@
+/* -------------- templates / game / list ----------------*/
+#catalogGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card{
+    height: 350px;
+    width: 350px;
+    box-shadow: 10px 10px 4px -6px #000000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gameName{
+    height: 30px;
+    background-color: var(--secondary);
+    box-sizing: border-box;
+    border-radius: 15px 15px 0 0;
+    padding: 5px;
+
+}
+.gameName h4{
+    word-break: break-all;
+}
+
+.card img{
+    max-height: 200px;
+    max-width: 150px;
+    margin-top: 15px;
+}
+
+.description{
+    height: 200px;
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.label{
+    width: 80px;
+    background-color: red;
+    border-radius: 10px;
+    padding: 3px;
+    margin-left: 15px;
+}
